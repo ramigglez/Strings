@@ -12,4 +12,5 @@
     <li>setTxt (string $txt)</li>
     <li>createHeaderString ($tag, $attr, $x = 0)</li>
     <li>_createHeaderString ($tag, $attrs, $x = 0)</li>
+    <li>createAttrsMixedList (array $mixed = [])</li>
 </ol>
