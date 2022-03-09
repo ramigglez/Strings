@@ -43,5 +43,25 @@ class Strings {
         }
         
     }
+    /*
+    *@param keys $mixed = [
+        "keyval" => [],
+        "inline" => []
+    ]
+    */
+    public function createAttrsMixedList (array $mixed = []) {
+        $attributes = '';
+        if (array_key_exists('keyval',$mixed) && array_key_exists('inline',$mixed)) {
+            foreach ($mixed['keyval'] as $key => $value) {
+                $attributes .= " ".$key."='".$value."'";
+            }
+            for ($i = 0; $i < count($mixed['inline']); $i++) {
+                $attributes .= " ".$mixed['inline'][$i];
+            }
+            return $attributes;
+        } else {
+            return "<script>alert('the keys are not valid.');</script>";
+        }
+    }
 
 }
