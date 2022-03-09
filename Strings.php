@@ -60,7 +60,7 @@ class Strings {
             }
             return $attributes;
         } else {
-            return "<script>alert('the keys are not valid.');</script>";
+            echo "<script>alert('the keys are not valid.');</script>";
         }
     }
 
